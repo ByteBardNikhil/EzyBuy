@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/EzyBuy/static/css/main.597d39d8.css",
+    "main.js": "/EzyBuy/static/js/main.03341952.js",
+    "index.html": "/EzyBuy/index.html",
+    "main.597d39d8.css.map": "/EzyBuy/static/css/main.597d39d8.css.map",
+    "main.03341952.js.map": "/EzyBuy/static/js/main.03341952.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.597d39d8.css",
+    "static/js/main.03341952.js"
+  ]
+}
