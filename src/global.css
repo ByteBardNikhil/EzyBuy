@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.register {
+  padding: 2rem;
+  background-color: black;
+  width: 30%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.register .register:hover {
+  transform: translateX(-50%);
+}
+.register p {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+.register p strong {
+  color: #2ab8ca;
+}
+
+.register h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.register form button {
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.register form button:hover {
+  background-color: #0d2c2f;
+}
+
+.register form input {
+  padding: 12px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.register form input::placeholder {
+  color: #242323;
+}
+
+@media (max-width: 768px) {
+  .register {
+    width: 80%;
+    top: 30%;
+  }
+
+  .register h2 {
+    font-size: 24px;
+  }
+
+  .register form {
+    gap: 1rem;
+  }
+
+  .register form button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .register form input {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .register {
+    width: 80%;
+    top: 30%;
+  }
+
+  .register h2 {
+    font-size: 20px;
+  }
+
+  .register form button {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .register form input {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+/*--------------------Navbar CSS Started-------------*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #090c0e;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+}
+.navbar .logo {
+  text-decoration: none;
+  color: white;
+  font-size: 1.6rem;
+}
+.navbar .nav-links {
+  display: flex;
+  gap: 1.6rem;
+}
+.navbar .nav-links a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: lighter;
+}
+.navbar .search-input {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid lightgray;
+  outline: none;
+  width: 250px;
+  transition: border-color 0.3s ease, box-shodow 0.3s ease;
+}
+.navbar .search-input::placeholder {
+  color: rgb(45, 44, 44);
+  font-style: italic;
+}
+.navbar .hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+}
+.navbar .hamburger div {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+.navbar .hamburger.active div:nth-child(1) {
+  transform: rotate(180deg) translate(5px, 5px);
+}
+.navbar .hamburger.active div:nth-child(2) {
+  opacity: 0;
+  display: none;
+}
+
+.navbar .hamburger.active div:nth-child(3) {
+  transform: rotate(-180deg) translate(5px, 5px);
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: block;
+  }
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 20px;
+    top: 1.5rem;
+    right: 4rem;
+    border-radius: 10px;
+  }
+
+  .navbar .nav-links.active {
+    display: flex;
+    margin-top: 1rem;
+    width: fit-content;
+    float: right;
+  }
+  .navbar .search-input {
+    width: 80%;
+
+    display: block;
+    margin: 0px auto;
+    margin-top: 1rem;
+  }
+  .navbar .logo {
+    font-size: 1.5rem;
+  }
+  .navbar .hamburger {
+    display: flex;
+
+    float: right;
+  }
+}
+
+/*--------------------Navbar CSS Ended-------------*/
